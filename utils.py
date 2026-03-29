@@ -1,3 +1,4 @@
+# utils is designed to perform simpler tasks and help main file and code to perform as expected
 def show_menu():
     print("\n====== Student AI CLI ======")
     print("1. Add Student Data")
