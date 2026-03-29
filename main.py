@@ -9,7 +9,8 @@ theta = None  # model
 
 def load_data():
     return pd.read_csv(DATA_FILE)
-
+    
+# a function define for adding new data of student
 def add_data():
     try:
         hours = float(input("Enter study hours: "))
@@ -28,6 +29,7 @@ def add_data():
     except:
         print("❌ Invalid input!")
 
+# a function is define for training ai model to work as expected
 def train():
     global theta
     data = load_data()
@@ -38,6 +40,7 @@ def train():
     theta = train_model(X, y)
     print("✅ Model trained successfully!")
 
+# function define for prediction of marks of student based on data
 def predict_marks():
     global theta
 
@@ -59,10 +62,12 @@ def predict_marks():
     except:
         print("❌ Invalid input!")
 
+# function define for viewing data on the basis of model is predicting marks
 def view_data():
     data = load_data()
     print("\nDataset:\n", data)
 
+# main function which directs all the other functions
 def main():
     while True:
         show_menu()
